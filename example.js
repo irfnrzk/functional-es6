@@ -59,3 +59,21 @@ combine2and3(subtract); // 2 - 3
 
 combine2and3(Math.max) // -> 3
 
+// returning functions
+
+const createPrinter = () => () => console.log('Hello');
+
+// const double = x => x * 2;
+// const triple = x => x * 3;
+// const quadruple = x => x * 4;
+
+const createMultiplier = y = x => x * y;
+
+const double = createMultiplier(2);
+const triple = createMultiplier(3);
+const quadruple = createMultiplier(4);
+
+double(3)
+
+
+
