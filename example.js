@@ -108,3 +108,31 @@ console.log(me.getJob());
 me.setJob('senior developer');
 console.log(me.getJob());
 
+// higher order functions
+
+const divide = (x, y) => {
+  if (y === 0) {
+    console.log('Error: dividing by zero');
+    return null;
+  }
+
+  return x / y;
+} // --> having a function do more than one job is a sign of refactor
+
+const secondArgumentIsntZero = func =>
+  (...args) => {
+    if (args[1] === 0) {
+      console.log('Error: dividing by zero');
+      return null;
+    }
+
+    console.log(...args)
+    console.log([...args])
+    console.log(func)
+    console.log(130, func(...args))
+    return func(...args);
+  }
+
+const divideNew = (x, y) => x / y; // --> function now does on thing
+const divideSafe = secondArgumentIsntZero(divideNew); // --> another function that does only one thing
+console.log(divideSafe(7, 1));
