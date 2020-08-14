@@ -27,3 +27,8 @@ const newNumbers = [
 ];
 
 console.log(newNumbers);
+
+// map
+
+const doubledNumbers = numbers.map(x => x * 2);
+console.log(doubledNumbers)
