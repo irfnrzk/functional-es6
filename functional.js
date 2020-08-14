@@ -31,4 +31,17 @@ console.log(newNumbers);
 // map
 
 const doubledNumbers = numbers.map(x => x * 2);
-console.log(doubledNumbers)
+console.log(doubledNumbers);
+
+const words = [
+  'hello',
+  'goodbye',
+  'the',
+  'Antartica'
+];
+
+const createLengthTest = minLength =>
+  word => word.length > minLength;
+
+const longWords = words.filter(createLengthTest(5));
+console.log(longWords);
