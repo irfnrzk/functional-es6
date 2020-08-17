@@ -1,3 +1,5 @@
+// challenge: convert arrays
+
 const electionVotes = [
   'Harry', 'Rick', 'Ben', 'Ben', 'Harry', 'Ashley',
   'Connor', 'Rick', 'Ashley', 'Rick', 'Albert', 'Ben',
@@ -42,4 +44,25 @@ console.log(tallyVotes(electionVotes));
       Rick: <some number>
       ...
   }
+*/
+
+// challenge: anagrams
+
+import words from 'an-array-of-english-words';
+
+const findAnagrams = (word, allWords) => {
+  const letters = word.split('');
+
+  console.log(letters)
+  allWords.reduce((acc, x) => ({
+
+  }), [])
+
+  // Your code here
+}
+
+console.log(findAnagrams('cinema', words));
+
+/*
+    Expected output: ['iceman', 'anemic']
 */
